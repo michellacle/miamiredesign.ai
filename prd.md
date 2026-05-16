@@ -1,57 +1,50 @@
-# PRD: AI-First Rapid Web Agency
+# miamiredesign.ai — PRD
 
 ## 1. Executive Summary
-A high-velocity web design and marketing firm that uses AI agents to replace the traditional, slow, and expensive web agency process. 
+A high-velocity AI-powered website redesign service for Miami small businesses. Input a URL or business description → get an instant, stunning website prototype optimized for both Google SEO and LLM search (ChatGPT/Claude/Perplexity).
 
-**Core Value Proposition:** Instant, stunning website redesigns for $297 (or similar low entry point) that are optimized for both traditional SEO and AI-search (LLMs).
+**Core Value Proposition:** Professional web design in minutes, not months. Faster and cheaper than agencies, better quality than DIY builders.
 
 **Primary Services:**
-1. **Instant Redesign:** Input a competitor's or your own URL -> get an instant, modern AI prototype.
-2. **Instant Build:** Input a business description -> get a fully populated, visually striking website prototype.
+1. **Instant Redesign:** Enter your existing URL → AI analyzes your current site and generates a "miami-modern" redesign prototype instantly.
+2. **Instant Build:** Describe your business → AI generates a full website from scratch.
 
 ## 2. Target Audience
-*   **Primary:** Miami SMBs (Restaurants, medical, real estate, retail) burned by slow agencies ($10k+, 6-week turnaround).
-*   **Secondary:** Marketing Directors needing rapid A/B landing pages or SEO updates.
-*   **Pain Points:** Slow timelines, high costs, jargon.
+- **Primary:** Miami business owners (restaurants, salons, real estate, medical) frustrated by slow $10k+ agency timelines
+- **Secondary:** Marketing directors needing fast landing pages or SEO updates
+- **Pain points:** Long wait times, high costs, complicated processes
 
-## 3. User Experience (UX)
+## 3. User Experience Flow
 
-### A. The URL Redesign Tool
-1. User inputs a URL.
-2. Our backend agent scrapes images, copy, and structure.
-3. **AI Engine** generates a "Miami-Modern" version of that site instantly (30s) side-by-side with the original.
-4. **CTA:** "I like this" -> Pricing/Chat.
+### A. URL Redesign Tool
+1. User enters their website URL
+2. Backend agent scrapes content and images
+3. AI generates a "Miami Modern" redesign in <60 seconds
+4. Side-by-side comparison shown (Old vs New)
+5. CTA: "I like this" → pricing/contact
 
-### B. The Description Builder
-1. User inputs a description: "I own a vegan bakery in Brickell. I sell custom cakes and want people to order."
-2. AI generates a fully structured marketing site (menu, about, booking).
-3. **CTA:** "Launch this business."
+### B. Description Builder
+1. User describes their business: "I own a vegan bakery in Brickell..."
+2. AI generates a complete marketing site (menu, about, booking form)
+3. CTA: "Launch this business"
 
-## 4. Core Features
+## 4. Technical Stack
+- **Frontend:** Next.js + Tailwind CSS + Lucide React (icons) + shadcn/ui (components)
+- **Backend:** Python/FastAPI for AI agent orchestration, URL scraping, LLM prompt generation
+- **Hosting:** Vercel (frontend) + Render/Railway (backend)
+- **Domain:** miamiredesign.ai
 
-### A. The "Instant Prototype"
-*   **Visual Style:** High-end tech aesthetic (sleek black/white) with vibrant Miami accents (gradients/energy).
-*   **Speed:** Generation must be under 30-60 seconds.
-*   **Editing:** Basic on-page editing via the prototype interface ("Click to edit your text").
+## 5. Business Model
+- **Tier 1:** $297 one-time (stunning AI-powered redesign or fresh build)
+- **Tier 2:** $297-$500/mo (AI Marketing Retainer — auto-updates, SEO, social posts)
+- **Tier 3:** $2,000+ (VIP Concierge — human review launch)
 
-### B. Generative SEO (GSEO)
-*   **Standard SEO:** Semantic HTML, auto-meta tags, image optimization (WebP).
-*   **LLM Optimization:** The site must be structured with **Schema.org JSON-LD** specifically tailored for AI chatbots so your client appears in the "AI Answer" for queries like "Best vegan bakery in Miami".
-
-### C. "The AI Marketing Agent" (Upsell/Retainer)
-*   Post-launch, the AI continues to work: auto-posts social updates, refreshes seasonal content, and generates monthly marketing reports.
-
-## 5. Tech Stack Recommendations
-*   **Frontend:** **Next.js + Tailwind CSS + Shadcn UI** (Fast, SEO-optimized, good for dynamic client inputs).
-*   **Backend:** **Python (FastAPI)** (Handles LLM orchestration, web scraping, and prompt generation).
-*   **Design Approach:** **Template Injection.** Instead of raw code generation (too unpredictable), AI fills pre-built, high-end "Miami-Modern" templates. Guarantees professional results.
-*   **Hosting:** **Vercel** (Frontend) + **Render/Railway** (Python API).
-
-## 6. Business Model
-*   **Tier 1: Instant Setup ($297 one-time).** A stunning, AI-built prototype + SEO baseline.
-*   **Tier 2: "AI Marketing Retainer" ($297–$500/month).** Recurring revenue. The AI agent continuously updates content, social, and ads.
-*   **Tier 3: VIP Concierge ($2,000+ one-time).** Manual review and launch assistance by high-level humans.
+## 6. SEO Strategy
+- Local SEO: "miami web design", "miami ai marketing"
+- Long-tail: "rapid website design miami", "miami seo agency"
+- Emerging category: "ai web agency miami", "miami ai website builder"
 
 ## 7. Visual Identity
-*   **Vibe:** "Miami Modern." Sleek, confident, high-energy.
-*   **Copy Tone:** Direct, slightly provocative. "Your competitor sleeps. We build in our sleep."
+- "Miami Modern" aesthetic: sleek black/white with vibrant neon gradients
+- Copy tone: direct, confident, slightly playful
+- Slogan idea: "Your competitor sleeps. We build in our sleep."
