@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miami Redesign.ai — AI-Powered Website Redesign Service | Miami, FL</title>
+  <meta name="description" content="Transform your Miami business website into a stunning, AI-optimized experience. Get your new site in under 60 seconds with our AI-powered redesign service." />
+  <meta name="keywords" content="miami web design, ai website designer, miami seo agency, rapid website rebuild, ai web design miami, miami digital marketing" />
+  <meta property="og:title" content="Miami Redesign.ai — AI-Powered Website Redesign Service" />
+  <meta property="og:description" content="Transform your Miami business website into a stunning, AI-optimized experience. Get your new site in under 60 seconds." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Miami Redesign.ai" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Miami Redesign.ai — AI-Powered Website Redesign Service" />
+  <meta name="twitter:description" content="Transform your Miami business website in 60 seconds with AI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#050504',
+            foreground: '#e2e8f0',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom styles not covered by Tailwind */
+    body {
+      background-color: #050504;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #22d3ee, #a855f7, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn-primary {
+      background: linear-gradient(to right, #06b6d4, #a855f7);
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(to right, #22d3ee, #c084fc);
+      transform: scale(1.02);
+    }
+    .btn-outline {
+      border: 1px solid #374151;
+      background: transparent;
+      transition: all 0.2s ease;
+    }
+    .btn-outline:hover {
+      background: #111827;
+      transform: scale(1.02);
+    }
+    .card {
+      background: rgba(17, 24, 39, 0.4);
+      border: 1px solid #1f2937;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      background: rgba(17, 24, 39, 0.6);
+      border-color: rgba(6, 182, 212, 0.3);
+    }
+    .service-card:hover {
+      background: rgba(17, 24, 39, 0.6);
+      border-color: rgba(168, 85, 247, 0.3);
+    }
+    .gradient-bg {
+      background: linear-gradient(to right, rgba(6, 182, 212, 0.1), rgba(147, 51, 234, 0.1), rgba(236, 72, 153, 0.1));
+      border: 1px solid #1f2937;
+    }
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Loading animation */
+    .loading {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .loading.show {
+      opacity: 1;
+    }
+    /* Fade in animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#050504] text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#050504]/90 backdrop-blur-sm border-b border-gray-800">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="text-xl font-bold gradient-text">Miami Redesign.ai</div>
+      <div class="flex items-center gap-6">
+        <a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a>
+        <a href="#industries" class="text-gray-300 hover:text-white transition-colors">Industries</a>
+        <a href="#how" class="text-gray-300 hover:text-white transition-colors">How It Works</a>
+        <a href="#transform" class="btn-primary px-6 py-2 rounded-lg font-semibold text-sm">Start Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-20">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/10 via-purple-500/10 to-transparent -z-10"></div>
+    
+    <div class="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text leading-tight">
+          Miami's First<br />
+          <span class="text-white">60-Second</span> Website<br />
+          <span class="text-white">Redesign Service</span>
+        </h1>
+        
+        <p class="mt-6 text-xl text-gray-300 max-w-2xl mx-auto">
+          Stop waiting weeks for a web agency. Enter your URL or describe your business, and watch your stunning new site appear in seconds.
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center" id="transform">
+          <button onclick="document.getElementById('url-form').scrollIntoView({behavior: 'smooth'})" class="flex items-center justify-center gap-2 btn-primary px-8 py-4 text-white font-semibold rounded-lg">
+            Start My Redesign
+            <!-- Chevron Right icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+          
+          <button onclick="document.getElementById('how').scrollIntoView({behavior: 'smooth'})" class="flex items-center justify-center gap-2 btn-outline px-8 py-4 text-white font-semibold rounded-lg">
+            <!-- Sparkles icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l2.4 7.2H22l-6.2 4.2 2.4 7.2-6.2-4.2-6.2 4.2 2.4-7.2L2 9.2h7.6z"/>
+            </svg>
+            See How It Works
+          </button>
+        </div>
+        
+        <!-- Supporting copy -->
+        <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div class="p-6 card rounded-lg">
+            <h3 class="text-lg font-semibold text-cyan-400">No More Waiting</h3>
+            <p class="mt-2 text-gray-400">Traditional agencies take 6+ weeks. We do it in 60 seconds.</p>
+          </div>
+          <div class="p-6 card rounded-lg">
+            <h3 class="text-lg font-semibold text-purple-400">AI-Powered SEO</h3>
+            <p class="mt-2 text-gray-400">Your site gets ranked for Google AND AI search engines.</p>
+          </div>
+          <div class="p-6 card rounded-lg">
+            <h3 class="text-lg font-semibold text-pink-400">Built for Miami</h3>
+            <p class="mt-2 text-gray-400">Vibrant aesthetics that capture the energy of South Florida.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how" class="px-4 py-16 sm:py-24 fade-in">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">
+        Two Ways To <span class="gradient-text">Transform</span> Your Web Presence
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Tool 1: URL Redesign -->
+        <div class="relative p-8 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-900/80 to-gray-900/20 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10 group" id="url-form">
+          <div class="absolute -top-6 -right-6 text-purple-500/20">
+            <svg class="w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l2.4 7.2H22l-6.2 4.2 2.4 7.2-6.2-4.2-6.2 4.2 2.4-7.2L2 9.2h7.6z"/>
+            </svg>
+          </div>
+          
+          <div class="p-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500/20 border border-cyan-500/30">
+            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          
+          <h3 class="text-2xl font-semibold mt-4">Redesign an Existing Site</h3>
+          <p class="mt-2 text-gray-400 mb-6">
+            Paste your website URL or a competitor's URL. We'll analyze the content and generate a stunning, modernized version of your page.
+          </p>
+          
+          <div class="relative">
+            <input 
+              type="url" 
+              id="url-input"
+              placeholder="Enter your website URL..." 
+              class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-white placeholder-gray-500"
+            />
+            <button onclick="handleUrlSubmit()" class="absolute right-2 top-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg text-white font-medium text-sm opacity-80 hover:opacity-100 transition-opacity">
+              Redesign
+            </button>
+          </div>
+          
+          <!-- Loading/Result area -->
+          <div id="url-result" class="loading mt-4 p-4 rounded-lg bg-gray-800/50 border border-gray-700">
+            <p class="text-gray-400 text-sm">Paste a URL above to see the magic happen...</p>
+          </div>
+        </div>
+        
+        <!-- Tool 2: From-Scratch Build -->
+        <div class="relative p-8 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-900/80 to-gray-900/20 transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10 group">
+          <div class="absolute -top-6 -right-6 text-cyan-500/20">
+            <svg class="w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"/>
+            </svg>
+          </div>
+          
+          <div class="p-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-pink-500/20 border border-pink-500/30">
+            <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l2.4 7.2H22l-6.2 4.2 2.4 7.2-6.2-4.2-6.2 4.2 2.4-7.2L2 9.2h7.6z"/>
+            </svg>
+          </div>
+          
+          <h3 class="text-2xl font-semibold mt-4">Build From Scratch</h3>
+          <p class="mt-2 text-gray-400 mb-6">
+            Tell us what your business does and we'll build a complete, polished website tailored to your needs.
+          </p>
+          
+          <div class="relative">
+            <textarea 
+              id="desc-input"
+              placeholder="Describe your business: I own a vegan bakery in Brickell. I sell custom cakes and want people to order online..." 
+              class="w-full h-20 px-4 py-3 mb-2 rounded-xl bg-gray-900 border border-gray-700 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 outline-none text-white placeholder-gray-500 resize-none"
+            ></textarea>
+            <button onclick="handleDescSubmit()" class="px-4 py-2 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg text-white font-medium text-sm opacity-80 hover:opacity-100 transition-opacity">
+              Build My Site
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="px-4 py-16 sm:py-24 fade-in">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">
+        Everything You Need To <span class="gradient-text">Succeed</span> Online
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex gap-4 p-6 card service-card rounded-xl">
+          <div class="p-3 rounded-lg bg-purple-500/20 border border-purple-500/30">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Instant Website Redesign</h3>
+            <p class="mt-1 text-gray-400">Your existing site, beautifully reimagined by AI in under 60 seconds.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4 p-6 card service-card rounded-xl">
+          <div class="p-3 rounded-lg bg-purple-500/20 border border-purple-500/30">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="9" cy="9" r="2"/>
+              <path d="M21 15l-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Gen-AI SEO Optimization</h3>
+            <p class="mt-1 text-gray-400">Your site will rank on Google AND be featured in AI chatbot responses like ChatGPT and Claude.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4 p-6 card service-card rounded-xl">
+          <div class="p-3 rounded-lg bg-purple-500/20 border border-purple-500/30">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Miami Modern Aesthetic</h3>
+            <p class="mt-1 text-gray-400">Vibrant, professional design that captures the energy of South Florida while appealing to your audience.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4 p-6 card service-card rounded-xl">
+          <div class="p-3 rounded-lg bg-purple-500/20 border border-purple-500/30">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17l9.2-9.2M17 17V7H7"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Continuous AI Marketing Agent</h3>
+            <p class="mt-1 text-gray-400">Our AI continues to work for you: updating content, posting social media, and generating monthly SEO reports.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 p-8 rounded-2xl gradient-bg">
+        <h3 class="text-2xl font-bold text-center mb-4">
+          <span class="gradient-text">Ready to transform your web presence?</span>
+        </h3>
+        <p class="text-center text-gray-400 mb-6">
+          Millions of Miami businesses still have websites from 2018. Be the first in your industry to upgrade.
+        </p>
+        <div class="text-center">
+          <a href="#transform" class="btn-primary px-8 py-4 text-white font-semibold rounded-lg inline-block">
+            Start My AI Redesign
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section id="industries" class="px-4 py-16 sm:py-24 fade-in">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-8">
+        Built For <span class="gradient-text">Miami Businesses</span>
+      </h2>
+      
+      <p class="text-xl text-gray-400 mb-10">
+        From South Beach to Brickell, we've helped local businesses transform their web presence and dominate Google search results.
+      </p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <div class="flex items-center gap-3 text-left px-4 py-3 rounded-lg card">
+          <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <span>Restaurants & Hospitality</span>
+        </div>
+        
+        <div class="flex items-center gap-3 text-left px-4 py-3 rounded-lg card">
+          <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <span>Real Estate</span>
+        </div>
+        
+        <div class="flex items-center gap-3 text-left px-4 py-3 rounded-lg card">
+          <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <span>Beauty & Salons</span>
+        </div>
+        
+        <div class="flex items-center gap-3 text-left px-4 py-3 rounded-lg card">
+          <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <span>Healthcare & Medical</span>
+        </div>
+        
+        <div class="flex items-center gap-3 text-left px-4 py-3 rounded-lg card">
+          <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <span>Retail & Boutique</span>
+        </div>
+        
+        <div class="flex items-center gap-3 text-left px-4 py-3 rounded-lg card">
+          <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <span>Professional Services</span>
+        </div>
+      </div>
+      
+      <div class="mt-12 p-6 rounded-xl border border-gray-800 bg-gradient-to-b from-gray-900/80 to-gray-900/20 max-w-2xl mx-auto">
+        <p class="text-gray-400 italic">
+          "Our competitor slept. We built in our sleep."
+        </p>
+        <p class="mt-4 text-white font-semibold">
+          — Miami Redesign.ai
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-4 py-12 border-t border-gray-800">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-400 text-sm">
+        &copy; 2024 Miami Redesign.ai — All rights reserved.
+      </p>
+      <p class="text-gray-500 text-xs mt-2">
+        Miami, FL | AI-Powered Web Redesign Service
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Fade in on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(el => observer.observe(el));
+    
+    // Handle URL form submission
+    function handleUrlSubmit() {
+      const url = document.getElementById('url-input').value.trim();
+      const result = document.getElementById('url-result');
+      
+      if (!url) {
+        alert('Please enter a URL first!');
+        return;
+      }
+      
+      // Show loading state
+      result.innerHTML = `
+        <div class="flex items-center gap-3">
+          <div class="animate-spin w-5 h-5 border-2 border-cyan-400 border-t-transparent rounded-full"></div>
+          <span class="text-gray-300">Analyzing your site...</span>
+        </div>
+      `;
+      
+      // Simulate AI processing (replace with actual API call later)
+      setTimeout(() => {
+        result.innerHTML = `
+          <div class="space-y-3">
+            <div class="flex items-center gap-2 text-green-400">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <span class="font-medium">Site analyzed successfully!</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              AI is generating your redesigned homepage... <span class="text-cyan-400">(backend integration coming soon)</span>
+            </p>
+          </div>
+        `;
+      }, 2000);
+    }
+    
+    // Handle description form submission
+    function handleDescSubmit() {
+      const desc = document.getElementById('desc-input').value.trim();
+      
+      if (!desc) {
+        alert('Please describe your business first!');
+        return;
+      }
+      
+      // Simulate AI processing (replace with actual API call later)
+      alert('AI generation started! (backend integration coming soon)');
+    }
+  </script>
+</body>
+</html>

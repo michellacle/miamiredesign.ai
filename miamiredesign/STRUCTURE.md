@@ -2,17 +2,12 @@
 
 ```
 miamiredesign/
-├── src/                   # Next.js source
-│   ├── app/
-│   │   ├── layout.tsx     # Root layout with SEO metadata
-│   │   ├── page.tsx       # Home page (index)
-│   │   └── globals.css    # Tailwind + dark theme
-│   └── components/
-│       ├── HeroSection.tsx          # Hero with CTAs
-│       ├── ToolsSection.tsx         # URL + description inputs
-│       ├── ResultsSection.tsx       # Feature cards + CTA
-│       └── TrustSection.tsx         # Industry trust + slogan
-├── public/                # Static assets
-├── env.ts                 # Environment variables
-└── package.json           # Dependencies
+├── index.html          # Main site (single HTML file)
+├── README.md           # Project documentation
+├── STRUCTURE.md        # File structure overview
+└── .gitignore          # Ignore node_modules and build artifacts
 ```
+
+## Deployment
+
+Hosted on GitHub Pages with no build step. The single `index.html` file contains everything.
